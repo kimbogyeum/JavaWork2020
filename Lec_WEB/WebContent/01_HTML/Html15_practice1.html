@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>주문 폼 작성</title>
+
+
+<style>
+table{
+    border: 1px solid black;  /* 두께, 선종류, 선색상 */
+    border-collapse: collapse; /* border 붙이기 */
+}
+
+body{
+	font-family:Verdana. sans-serif;
+	font-size: 0.9em;
+}
+</style>
+</head>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<body>
+<br>주문자 정보 입력<br>
+<table style="width:80%">
+<br>
+
+
+	<tr>
+	<th style="text-align: left">
+	<br>
+		&emsp;주문자 정보 
+	</th>
+	<th style="text-align: left;font-size: 11px">
+	<br>
+	비회원으로 상품구매 시 반드시 본인인증을 하셔야합니다.
+	 <button>휴대폰인증</button>
+	 <button>아이폰인증</button>
+	</th>
+	</tr>	
+	
+	
+	
+	<tr>
+	<th style="text-align: left">
+		&emsp;주소
+	</th>
+	<th style="text-align: left">
+	<br>
+	 <input name="lastname" type='text' size='20' value="">
+	 <button>주소찾기</button>
+	 <br><br>
+	 <input name="lastname" type='text' size='50' value="">
+	 <br><br>
+	 <input name="lastname" type='text' size='50' value="">
+	 <br>
+	</th>
+	</tr>
+	
+	
+	<tr>
+	<th style="text-align: left">
+	<br>
+		&emsp;휴대전화 
+	</th>
+	<th style="text-align: left;font-size: 11px">
+	<br>
+	<select name="phonenumber">
+	<option value="010">010</option>
+	<option value="011">011</option>
+	<option value="016">016</option>
+	</select>
+	&nbsp;-&nbsp;
+	<input name="lastname" type='text' size='4' value="">
+	&nbsp;-&nbsp;
+	<input name="lastname" type='text' size='4' value="">
+	&nbsp;
+	<input type="checkbox" name="sms" checked>SMS수신동의<br>
+	</th>
+	</tr>	
+	
+	<tr>
+	<th style="text-align: left">
+	<br>
+		&emsp;이메일 
+	</th>
+	<th style="text-align: left;font-size: 11px">
+	<br>
+
+	<input name="lastname" type='text' size='4' value="">
+	&nbsp;@&nbsp;
+	<input name="lastname" type='text' size='4' value="">
+	&nbsp;
+	<select name="email">
+	<option value="direct">직접입력</option>
+	<option value="naver">naver.com</option>
+	<option value="google">gmail.com</option>
+	</select>
+	 <br><br>
+	</th>
+	</tr>
+</table>
+<h5>SK플래닛(주)는 통신판매중재자로 통신판매의 당사자가 아니며 , 개별판매자가 등록한 상품정보 및 거래에 대해 SK플래닛(주)는 일체의 책임을 지지 않습니다.</h5> <br>
+<br>배송지 정보 입력<br>
+<table style="width:80%">
+<br>
+
+
+	<tr>
+	<th style="text-align: left">
+	<br>
+		&emsp;배송지선택 
+	</th>
+	<th style="text-align: left;font-size: 11px">
+	<br>
+	 <button>주문자 정보와 동일</button>
+	</th>
+	</tr>	
+	
+	
+	
+	<tr>
+	<th style="text-align: left">
+		&emsp;받으시는 분 
+	</th>
+	<th style="text-align: left">
+	<br>
+	 <input name="lastname" type='text' size='30'>
+	</th>
+	</tr>
+	
+	
+	<tr>
+	<th style="text-align: left">
+		&emsp;주소
+	</th>
+	<th style="text-align: left; font-size: 11px">
+	<br>
+	 <input name="lastname" type='text' size='10' value="">
+	 <button>주소찾기</button>
+		&nbsp;
+	<input type="checkbox" name="sms">배송지목록에 추가<br>
+	 <input name="lastname" type='text' size='50' value="">
+	 <br><br>
+	 <input name="lastname" type='text' size='50' value="">
+	 <br>
+	</th>
+	</tr>
+	
+	
+	
+	
+	<tr>
+	<th style="text-align: left">
+	<br>
+		&emsp;휴대전화 
+	</th>
+	<th style="text-align: left;font-size: 11px">
+	<br>
+	<select name="phonenumber">
+	<option value="010">010</option>
+	<option value="011">011</option>
+	<option value="016">016</option>
+	</select>
+	&nbsp;-&nbsp;
+	<input name="lastname" type='text' size='4' value="">
+	&nbsp;-&nbsp;
+	<input name="lastname" type='text' size='4' value="">
+	&nbsp;
+	<input type="checkbox" name="satisfied" checked>안심번호 사용(무료)
+	<i class="fas fa-question"></i>
+	&emsp;
+	<input type="checkbox" name="homeadd">집전화 추가 입력
+	</th>
+	</tr>	
+	
+	
+	
+	<tr>
+	<th style="text-align: left">
+		&emsp;배송시요구사항
+	</th>
+	<th style="text-align: left; font-size: 11px">
+	<br>
+	 <input name="lastname" type='text' size='50' value="">
+	 (0자/50자)<br>
+	 <p style="color:blue">* 특정한 배송일을 지정하고자 할 경우 판매자와 연락하여 배송일을 확인해주시기 바랍니다.</p> 
+	<br><br>
+	</th>
+	</tr>
+</table>
+
+
+
+<br>결제 정보 입력<br>
+<table style="width:80%">
+<br>
+	<tr>
+	<th style="text-align: left">
+	<br>
+		&emsp;신용카드 
+	</th>
+	<th style="text-align: left;font-size: 11px">
+	<br>
+	 <input type="radio" checked/>신용카드(일반)
+	 &emsp;
+	  <input type="radio"/>신용카드(법인)
+	 &emsp;
+	  <input type="radio"/>해외발급카드
+	 &emsp;
+	</th>
+	</tr>	
+	
+	
+	<tr>
+	<th style="text-align: left">
+	<br>
+		&emsp;현금결제 
+	</th>
+	<th style="text-align: left;font-size: 11px">
+	<br>
+	 <input type="radio" />무통장입금
+	 &emsp;
+	  <input type="radio"/>실시간 계좌이체
+	 &emsp;
+
+	</th>
+	</tr>	
+	
+	
+	<tr>
+	<th style="text-align: left">
+		&emsp;카드선택
+	</th>
+	<th style="text-align: left; font-size: 11px">
+	<br>
+	<select name="cardselect">
+	<option value="선택하세요">선택하세요 &emsp;</option>
+	<option value="신한">신한카드 &emsp;</option>
+	<option value="우리">우리카드 &emsp;</option>
+	</select>
+	</th>
+	</tr>
+	
+
+	<tr>
+	<th style="text-align: left">
+		&emsp;할부방식
+	</th>
+	<th style="text-align: left; font-size: 11px">
+	<br>
+	<select name="cardselect">
+	<option value="선택하세요">일시불 &emsp;</option>
+	<option value="3개월할부">3개월할부 &emsp;</option>
+	</select>
+	</th>
+	</tr>
+	
+	
+	
+	<tr>
+	<th style="text-align: left">
+		&emsp;결제안내
+	</th>
+	<th style="text-align: left; font-size:11px">
+	<br>
+	<button style="color:red; border:1px solid red">간편결제안내</button>
+	&nbsp;
+	<button>공인인증안내</button>
+	&nbsp;
+	<button>안전결제안내</button>
+	&nbsp;
+	<button>안심클릭안내</button>
+	&nbsp;
+	<button>해외발급카드안내</button>
+	
+	<br><br>
+	</th>
+	</tr>
+	
+	
+</table>
+</body>
+</html>
