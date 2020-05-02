@@ -26,12 +26,13 @@ public class Main {
 		int sum=0,cnt=0;
 		for(;;) {
 			n=sc.nextInt();
+			
 			if(0>n||n>100) break;
 			sum=sum+n;
 			cnt++;
 			}
-			System.out.println("sum: "+sum);
-			System.out.printf("avg: %.1f",(double)sum/cnt);
+			System.out.println("sum : "+sum);
+			System.out.printf("avg : %.1f",(double)sum/cnt);
 			
 			sc.close();
 		}

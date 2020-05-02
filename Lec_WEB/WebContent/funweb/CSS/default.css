@@ -181,11 +181,11 @@ article#front{
 	padding: 5px 0 0 26px;
 }
 
-#sec_news.orange{
+#sec_news .orange{
 	color: #827b00;
 }
 
-#news_notice.brown{
+#news_notice .brown{
 	color: #827b00;
 }
 
