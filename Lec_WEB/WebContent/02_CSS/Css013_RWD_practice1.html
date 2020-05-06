@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,93 @@
 
         *{
             box-sizing: border-box;
-            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
         }
         
+        .clear{
+
+	        clear: both;
+        }
+
+        .C{
+            height: 150px;
+        }
+
+        .D{
+            height: 150px;
+            float: left;
+        }
+
+        .E{
+            float: left;
+        }
+
+        .ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fa;
+        }
+
+        .li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+
+        }
+
+        /* 1. 기본스타일: PC first*/
+        [class *="col-"]{
+            float: left;
+            padding: 15px;
+
+        }
+        .col-1{ width: 8.33%;} /* 1칸짜리 폭 */
+        .col-2{ width: 16.66%;} /* 2칸짜리 폭 */
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12{ width: 100%;} /* 12칸짜리 폭 */
 
 
+        /* 2. 768px 이하일때 적용*/
+        @media screen and (max-width: 768px){
+            .col-m-1 {width: 8.33%; }  /* 1칸 짜리 폭 */
+            .col-m-2 {width: 16.66%; }  /* 2칸 짜리 폭 */
+            .col-m-3 {width: 25%;}
+            .col-m-4 {width: 33.33%;}
+            .col-m-5 {width: 41.66%;}
+            .col-m-6 {width: 50%;}
+            .col-m-7 {width: 58.33%;}
+            .col-m-8 {width: 66.66%;}
+            .col-m-9 {width: 75%;}
+            .col-m-10 {width: 83.33%;}
+            .col-m-11 {width: 91.66%;}
+            .col-m-12 {width: 100%;}
+            .EE{height: 75px;}
+            .FF{height: 75px;}
+           
+        }
+
+        /* 3. 600px 이하일때 적용: mobile*/
+        @media screen and (max-width: 600px){
+            .B{width: 100%;}
+            .C{width: 100% ; height: 50px;}
+            .D{width: 100%;height:100px;}
+            .E{width: 33.33%;height:50px;}
+            .F{width: 33.33%;height:50px;}
+            .G{width: 33.33%; height:50px;}
+            .H{width:100%;}
+            div.A{display: none;}
+        }
 
     </style>
 
@@ -21,16 +103,42 @@
 </head>
 
 <body>
-    <div class="A">
-        <p>A</p>
+    <div class="A col-4 col-m-2" style="background-color: rgb(231, 177, 241);">
+    A
     </div>
     
-    <div class="B">
-        <p>B</p>
+    <div class="B col-8 col-m-10" style="background-color: blueviolet;">
+    B
     </div>
     
-    <div class="C">
-        <p>C</p>
+    
+
+    <div class="C col-2 col-m-2"  style="background-color: cyan;">
+    C
     </div>
+
+    <div class="D col-6 col-m-8" style="background-color: white; border: 1px solid black;" >
+    D
+    </div>
+
+    <div class=" EE E col-4 col-m-2" style="background-color: rgb(240, 233, 170);">
+    E
+    </div>
+
+    <div class="FF F col-4 col-m-2" style="background-color: rgb(26, 102, 102);">
+    F
+    </div>
+
+    <div class="G col-4 col-m-3" style="background-color: rgb(236, 191, 68);">
+    G
+    </div>
+    
+ 
+
+    <div class="H col-12 col-m-9" style="background-color: rgb(255, 217, 0);">
+    H
+    </div>
+
+
 </body>
 </html>
