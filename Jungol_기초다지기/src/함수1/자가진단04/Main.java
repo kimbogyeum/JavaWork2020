@@ -21,7 +21,7 @@ public class Main {
 		return result2;
 	}
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in); 
 		int num11,num22,num33=0;
 		num11=sc.nextInt();
 		num22=sc.nextInt();
