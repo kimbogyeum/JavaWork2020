@@ -1,10 +1,10 @@
 {
 	"folders": {},
 	"connections": {
-		"oracle_thin-1714e2539b6-6b5fe1016e4856de": {
+		"oracle_thin-171e7aa49ef-46083bb764d5d230": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "Oracle - XE",
+			"name": "Oracle - XE 3",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
@@ -25,7 +25,8 @@
 					"@dbeaver-use-meta-optimizer@": "false",
 					"@dbeaver-connection-type@": "BASIC"
 				},
-				"auth-model": "oracle_native"
+				"auth-model": "oracle_native",
+				"handlers": {}
 			}
 		}
 	},
