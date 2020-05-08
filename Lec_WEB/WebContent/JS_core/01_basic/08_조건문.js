@@ -79,21 +79,19 @@ console.log('isTrue=',isTrue,typeof isTrue)
 
 console.log()
 
-
-//함수정의할때 매개변수 체크 필요 --여기 강사님꺼 다시보자. 잘못쓴듯,
+// 함수 정의할때 매개변수 체크 필요
 function printName(person){
+    
+    // 매개변수 null check .
+    //if(person === undefined || person === null) return;
+    if(!person) return;   // 간단하게 해결
 
-    //매개변수 null check 
-    //if(person===undefined||person===null) return;
-    if(!person) return;
-    console.log('이름은',person.name)
+    console.log('이름은', person.name)
 }
 
+printName(myBrother);
+printName();
 
-let myBrother={name:"John"}
-printName(myBrother)
-printName()
-// printName() //에러, undefined 값이 person에 넘겨짐
 
 
 

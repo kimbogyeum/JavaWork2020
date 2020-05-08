@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 연습</title>
+
+    <style>
+        p {
+            border:solid 1px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <h3>회원가입 동의 약관</h3>
+    <h3>아래 체크박스를 다 클릭했을때만 제출이 되도록 하고</h3>
+    <h3>하나라도 체크 안되면 체크 안되었다는 팝업을 띄웁니다.</h3>
+    <form name="form1"  action="https://www.w3schools.com/action_page.php" method="get">
+        <p>약관내용1 <br /> 어쩌구 저쩌구</p>
+        <input type="checkbox" name="num"/>  약관에 동의하셔야 합니다 (필수)
+        <p>약관내용2 <br /> 주저리 주저리</p>
+        <input type="checkbox" name="num" />  약관에 동의하셔야 합니다 (필수)
+        <p>약관내용3<br /> 왈가 왈부</p>
+        <input type="checkbox" name="num"/>  약관에 동의하셔야 합니다 (필수)
+        <br />
+        <input type="button" value="제출" onclick="allSubmit()">
+    </form>
+    <h3 id="result"></h3>
+
+
+
+
+<script>
+// function allSubmit(){
+//     var frm= document.forms.form1;
+//     if(frm["num1"].checked && frm["num2"].checked && frm["num3"].checked ){
+//         frm.submit();
+//     }else{
+//         alert("모든 약관에 동의하셔야 합니다.");
+//     }
+
+//     return;
+
+// }
+
+function allSubmit(){
+    var frm= document.forms.form1;
+    agree=document.getElementsByName("num");
+    //name 없이 찾는 방법. 
+    //agree=document.querySelectorAll("input[type='checkbox']");
+
+    for(i=0; i<agree.length;i++){
+        if(!agree[i].checked){
+            alert("모든 약관에 동의해야합니다. ")
+            agree[i].focus();
+            return;
+
+        }
+        frm.submit();
+    }
+
+
+    alert("성공적으로 완료")
+}
+
+</script>
+
+
+
+</body>
+
+
+</html>
+

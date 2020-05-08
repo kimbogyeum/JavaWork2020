@@ -19,6 +19,7 @@ for(i=0;i<cars.length;i++){
     console.log(cars[i])
 }
 
+console.log()
 var length=cars.length
 for(i=0;i<length;i++){ //이게 위의 경우보다 좋은 성능을 보인다. 
     console.log(cars[i])
