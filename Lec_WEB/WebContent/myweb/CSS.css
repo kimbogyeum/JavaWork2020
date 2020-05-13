@@ -1,4 +1,10 @@
 
+body {
+    background: #fff;
+    color: #555;
+    font-family: "Avenir Next", Avenir, Roboto, "Century Gothic", "Franklin Gothic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+}
 
 div#box{
     width: 100%;
@@ -10,6 +16,7 @@ div#box{
     background-color: rgb(81, 180, 247);
     line-height: 1.6;
     color: white;
+    margin: 0px;
 }
 
 nav{
@@ -54,4 +61,27 @@ div.menu2 li a{
 	height: 20px;
     padding: 10px;
     float: left;
+}
+
+div#main{
+    background-image: url("img/MAIN.jpg");
+    width: 100%;
+    height: 830px;   
+    background-position: center;
+    background-size: cover;
+}
+
+div#main.main1{
+    text-align:left;
+    color: #555555;
+    vertical-align: middle;
+    display: table-cell;
+
+}
+
+.main11{
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
 }

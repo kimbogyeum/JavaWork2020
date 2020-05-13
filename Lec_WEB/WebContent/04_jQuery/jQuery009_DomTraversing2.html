@@ -47,7 +47,7 @@ button {
 	 //---------------------------------------
 	 // first() select 된것들중 첫번째
 	 $("#btn11").click(function(){
-	 	// TODO
+		$("div").first().addClass("selected");
 	 });
 
 	 // last() select 된것들중 마지막
@@ -57,17 +57,17 @@ button {
 
 	// eq(i) 인덱스로 선택 가능
 	 $("#btn13").click(function(){
-		 	// TODO
+		$("div").eq(1).addClass("selected");
 	});
 	
 	// filter() 
 	 $("#btn14").click(function(){
-		 	// TODO
+		$("div").filter(".intro").addClass("selected");
 	});
 	
 	// not()
 	 $("#btn15").click(function(){
-		 	// TODO
+		$("div").not(".intro").addClass("selected");
 	});
 	 
 	 
