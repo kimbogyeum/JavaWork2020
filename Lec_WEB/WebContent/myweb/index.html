@@ -4,132 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+
+
     <title>blue bottle</title>
 </head>
 <body>
 <!-- 메뉴 -->   
 <div id=box>
 무료 배달을 경험해보세요 
-
 </div> 
 <nav>
-    <div class="firstpic"><img src="img/blue bottle.jpg"  width="64" height="60" alt="bluebottle"></div>
+    <div class="firstpic"><a href="index.html"><img src="img/blue bottle.jpg"  width="64" height="60" alt="bluebottle"></a></div>
     <div id="menu">
         <div class="menu1">
-            <ul>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">VISIT</a></li>
-                <li><a href="#">LEARN</a></li>
-            </ul>
+                <ul><li>
+                    <a href="#">SHOP<span class="arrow"></span></a>
+                        <ul class="menudetail">
+                            <li><a href="#">Subscriptions</a></li>
+                        </ul> 
+                </li></ul>
+                <ul><li>
+                <a href="#">VISIT<span class="arrow"></span></a>
+                <ul class="menudetail">
+                    <li><a href="#">Korea</a></li>
+                    <li><a href="#">Northern California</a></li>
+                    <li><a href="#">Southern California</a></li>
+                    <li><a href="#">Boston</a></li>
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">Washington, D.C.</a></li>
+                </ul> 
+            </li></ul>
+            <ul><li>
+                <a href="#">LEARN<span class="arrow"></span></a>
+                <ul class="menudetail">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Our Coffee</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Brew Guides</a></li>
+                    <li><a href="#">Coffee Match</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul> 
+            </li></ul>
         </div>
         <div class="menu2">
             <ul>
                 <li><a href="#"> SUBSCRIBE </a></li>
-                
-                <li><a href="#"> SIGN IN </a></li>
+                <li><a href="signup.html"> SIGN IN </a></li>
             </ul>
         </div>   
     </div>
 </nav>
 
-<div id="main">
+<div id="main"> 
     <div class="main1">
         <div class="main1-1">
-
-            <div class="main11">Blue Bottle At Home</div>
-            <h1 class="main12">가장 좋아하는 커피를 구독해보셩</h1>
-            <div class="main13"><a href="/at-home">SIGN UP</a></div>
-
+            <div class="main1-11">Blue Bottle At Home</div>
+            <h1 class="main1-12">가장 좋아하는 커피를 구독해보세요.</h1>
+            <div class="main1-13"><a class="a" href="/at-home">SIGN UP</a></div>
         </div>
     </div>
-    <div class="gongback1"></div>
-    <div class="main2"></div>
+
+    <div class="main2">
+        <div class="main2-1">
+            <hr>
+                <div class="main2-11">
+                    <div class="main2-21">
+                        Charlie Habegger, Green Coffee Buyer
+                    </div>
+                    <div class="main2-22">
+                        Great coffee takes many forms. There is no one profile that we’re after, but we want every coffee to be delicious and, at times, provocative and unexpected.
+                    </div>
+                    <div class="main2-23">
+                        <a href="#">  퍼스널 커피를 선택할 수 있습니다 </a>
+                    </div>
+                </div>
+            </hr>
+        </div>
+        <div class="main2-2">
+            <hr class="hr2"></hr>
+            <h3 class="main2title">MD'S PICK</h3>
+            
+            <div class="product_slide"></div>
+        </div>
+        <div class="main2-3"></div>
+        <hr class="hr2"></hr>
+    </div>
+
+
+<!--foot-->
+    <div class="foot">
+        <div class="bsbc1">
+            <div class="basic">
+                <h2>BASICS</h2>
+                    <a href="">우리의 이야기</a>
+                    <a href="">우리의 커피</a>
+                    <a href="">우리의 위치</a>
+                    <a href="">콜드브루</a>
+                    <a href="">이벤트</a>
+                    <a href="">FAQ</a>
+                    <a href="">블로그</a>
+            </div>  
+            <div class="shop">
+                <h2>SHOP</h2>
+                    <a href="">Coffee</a>
+                    <a href="">Brewing</a>
+                    <a href="">굿즈</a>
+                    <a href="">구독</a>
+            
+            </div>
+            <div class="brewguides">
+                <h2>BREW GUIDES</h2>
+                    <a href="">에스프레소</a>
+                    <a href="">콜드브루</a>
+                    <a href="">프렌치 프레스</a>
+                    <a href="">쉬폰</a>
+                    <a href="">MORE...</a>
+            </div>
+            <div class="company">
+                <h2>COMPANY</h2>
+                    <a href="">iOS App</a>
+                    <a href="">Careers</a>
+                    <a href="">Contact Us</a>
+    
+            </div>
+        </div>
+        <div class="foot2">
+            <div class="bsbc2">
+                <div class="Connect">
+                    <h2 class="connectwithus">Connect with Us</h2>
+                    <div class="snspictures">
+                        <div class="instagram">
+                            <a  href="http://instagram.com/bluebottle"><img src="img/instagram.png" alt="instagram">
+                            </a>
+                        </div>
+                        <div class="twitter">
+                            <a  href="http://twitter.com/bluebottle"><img src="img/twitter.png" alt="instagram">
+                            </a>
+                        </div>
+                        <div class="facebook">
+                            <a href="http://facebook.com/bluebottle"><img src="img/facebook.png" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="Illustrated">
+                    <div class="illupic"><img src="img/illupic.PNG" width="59" height="45" alt="instagram"></div>
+                    <div class="illutext">
+                        <h2>Check out our blog</h2>
+                    </div>
+                </div>
+            </div>
+                
+        </div> 
+
+
+        <div class="language">
+            <div class="2020">© 2020 <b>BLUE BOTTLE COFFEE</b> Inc., All Rights Reserved</div>
+            <div class="">
+                <div class="">
+                    <a class="" href="#">Language</a>
+                </div>
+                <div class="">
+                    <a class="" href="#">Terms of Use</a>
+                </div>
+                <div class="">
+                    <a class="" href="#">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
 
-<!-- footer 
-<footer>
-    <div class="gongback2"></div>
-    <div class="bsbc1">
-        <div class="basic"></div>
-            <h2>BASICS</h2>
-                <a href="">우리의 이야기</a>
-                <a href="">우리의 커피</a>
-                <a href="">우리의 위치</a>
-                <a href="">콜드브루</a>
-                <a href="">이벤트</a>
-                <a href="">FAQ</a>
-                <a href="">블로그</a>
-          
-        <div class="shop">
-            <h2>SHOP</h2>
-                <a href="">Coffee</a>
-                <a href="">Brewing</a>
-                <a href="">굿즈</a>
-                <a href="">구독</a>
-          
-        </div>
-        <div class="brewguides">
-            <h2>BREW GUIDES</h2>
-                <a href="">에스프레소</a>
-                <a href="">콜드브루</a>
-                <a href="">프렌치 프레스</a>
-                <a href="">쉬폰</a>
-                <a href="">MORE...</a>
 
-     
-        </div>
-        <div class="company">
-            <h2>COMPANY</h2>
-                <a href="">iOS App</a>
-                <a href="">Careers</a>
-                <a href="">Contact Us</a>
-  
-        </div>
-    </div>
-    <div class="bsbc2">
-        <div class="detailcontact">
-            <div class="">
-                <h2 class="">Connect with Us</h2>
-                <div class="tl">
-                    <a target="_blank" rel="noopener" class="dib pr20 link v-top fill-gray" href="http://instagram.com/bluebottle">
-                        <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                            <title>Instagram Icon</title>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="">
-                <svg width="59" height="45" viewBox="0 0 59 45" xmlns="http://www.w3.org/2000/svg">
-                    <title>Illustrated Coffee Mug</title>
-                </svg>
-            </div>
-            
-            <div class="">
-                <h2 class="">Check out our blog</h2>
-                    <div class="">Blue Bottle Coffee Lab</div>
-                        <a class="" href="https://blog.bluebottlecoffee.com">READ MORE
-                        </a>
-                    </div>
-            </div>
-    </div>
-    <div class="language">
-        <div class="2020">© 2020 <b>BLUE BOTTLE COFFEE</b> Inc., All Rights Reserved</div>
-        <div class="">
-            <div class="">
-                <a class="" href="#">Language</a>
-            </div>
-            <div class="">
-                <a class="" href="#">Terms of Use</a>
-            </div>
-            <div class="">
-                <a class="" href="#">Privacy</a>
-            </div>
-        </div>
-    </div>
-</footer> -->
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="JS.js" type="text/javascript"></script>
 </html>
