@@ -24,7 +24,7 @@ div#box{
     padding: 5px;
     size: 12px;
     box-sizing: border-box;
-    background-color: rgb(81, 180, 247);
+    background-color: rgb(55, 128, 177);
     line-height: 1.6;
     color: white;
     margin: 0px;
@@ -38,37 +38,49 @@ div#box{
 nav{
     height: 66px;
     display: block;
+    border-color: #E5E5E5;
+    border-width: 1px;
+    border-bottom-style: solid;
 }
 
 div.firstpic{
+    margin-left: 650px;
     float: left;
 
 }
 
-
+/* 메인메뉴 */
 div.menu1 li{
     float: left; 
     margin: 0 5px;
     list-style: none;
-    height: 66px;
- 
 }
 
 div.menu1 li a{
 	text-decoration: none;
 	color:#333;
 	display:block; 
-	height: 20px;
     padding: 10px;
-    float: left;
+}
+
+/* 서브메뉴 */
+.menudetail{
+   position: absolute;
+    background-color: white;
+    color: #333;
+
+}
+
+.menudetail a{
+    text-decoration: none;
 }
 
 
-div.menu1 li :hover{
-	background-image: url(img/blue.gif);
-	background-repeat: repeat-x;
-	background-position: bottom;
+.menudetail a:hover{
+    text-decoration: none;
+    color:  #01a1dd;
 }
+
 
 div.menu2 li{
     float: right; 
@@ -128,6 +140,8 @@ div#main{
     height: 830px;   
     background-position: center;
     background-size: cover;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .main1{
@@ -285,6 +299,8 @@ hr.hr2{
 
 
 /* footer */
+
+
 .foot{
     border-color: #E5E5E5;
     border-width: 1px;
@@ -293,13 +309,19 @@ hr.hr2{
     margin: 0;
     display: block;
     font-weight: normal;
+    padding-top: 30px;
 }
 
+
 .bsbc1{
-    width: 1200px;
-    margin: 30px 350px 30px 350px;
+    padding-left: 0;
+    padding-right: 0;
     box-sizing: border-box;
     display: table;
+    padding-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
 
 }
 
@@ -399,28 +421,34 @@ hr.hr2{
 
 }
 
+.bsbc1 a:hover{
+    color: #01a1dd;
+}
+
+
 .basic{
     float: left;
-    width: 25%;
+    width: 240px;
     box-sizing: border-box;
+    padding-right: 5px;
 }
 
 .shop{
     float: left;
-    width: 25%;
+    width: 240px;
     box-sizing: border-box;
     font-weight: normal;
 }
 
 .brewguides{
     float: left;
-    width: 25%;
+    width: 240px;
     box-sizing: border-box;
 }
 
 .company{
     float: left;
-    width: 25%;
+    width: 240px;
     box-sizing: border-box;
 }
 
@@ -429,6 +457,7 @@ hr.hr2{
     border-color: #E5E5E5;
     border-width: 1px;
     border-top-style: solid;
+    padding-top: 15px;
     width: 100%;
     margin: 0;
     display: block;
@@ -436,10 +465,14 @@ hr.hr2{
 }
 
 .bsbc2{
-    width: 1200px;
-    margin: 30px 350px 30px 350px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 25px;
     box-sizing: border-box;
     display: table;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
 }
 
 .connectwithus{
@@ -462,22 +495,36 @@ hr.hr2{
 }
 
 .Connect{
-
-    margin-right: 50px;
+    float: left;
+    width: 480px;
+    box-sizing: border-box;
+    padding-right: 5px;
 }
 
 .Illustrated{
-    margin-left: 500px;
+    float: left;
+    width: 480px;
+    box-sizing: border-box;
+    padding-right: 5px;
 }
+
 
 .illupic{
-    padding-right: 600px;
+    float: left;
+    width: 100px;
+    box-sizing: border-box;
+    padding-right: 5px;
+
 }
 
+
 .illutext{
-    margin-left: 550px;
-    vertical-align: middle;
+    float: left;
+    width: 240px;
+    box-sizing: border-box;
+    padding-right: 5px;
 }
+
 
 .illutext h2{
     font-size: 14px;
@@ -485,4 +532,215 @@ hr.hr2{
     letter-spacing: 1.5px;
     line-height: 1.2;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.illutext div{
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.illutext a{
+    color: #01a1dd;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+/* foot3 */
+.language{
+    background-color: #f3f3f3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.lan{
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 480px;
+    max-width: 960px;
+}
+
+.lan2{
+    float: left;
+    vertical-align: top;
+    padding-left: 45px;
+    width: 480px;
+}
+
+/* signup page */
+.maincontainer{
+    min-height: auto;
+    padding: 0;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.signshare{
+    width: 35%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
+}
+
+
+.topdescirpt{
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.ih-title{
+    line-height: 1.3;
+    font-size: 24.5px;
+    font-weight: normal;
+    text-align: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+.ih-body{
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+}
+
+.signform{
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.classform{
+    margin: 0 0 20px;
+}
+
+.control{
+    padding-bottom: 10px;
+}
+
+.label{
+    color: #777;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.red{
+    color: #CC333F;
+}
+
+.control input{
+    width: 100%;
+    line-height: 20px;
+    color: #555;
+    margin: 3px 0 7px;
+    padding: 8px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+.contro-address input{
+    width: 80%;
+    line-height: 20px;
+    color: #555;
+    margin: 3px 4px 10px 0px;
+    padding: 8px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    
+}
+
+
+.contro-address button{
+    width: 16%;
+    line-height: 20px;
+    color: rgb(250, 244, 244);
+    margin: 3px 0 7px;
+    padding: 8px;
+    height: auto;
+    background-color:#01a1dd;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+}
+
+.control .cardselect{
+    width: 105%;
+    line-height: 20px;
+    color: #555;
+    padding: 12px;
+    height: auto;
+}
+
+
+
+
+.t10{
+    padding-top: 10px;
+    
+}
+
+.t10 input:hover{
+    background-color: #066e94;
+    
+}
+
+.t10 input{
+    width: 100%;
+    background-color: #01a1dd;
+    color: #f3f3f3;
+    font-weight: normal;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    vertical-align: middle;
+    height: 25px;
+}
+
+.t11{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    
+}
+
+.t11a{
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.t11b a{
+    color: #01a1dd;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none !important;
 }
