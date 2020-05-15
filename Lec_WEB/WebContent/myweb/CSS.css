@@ -7,6 +7,10 @@ div{
     display: block;
 }
 
+li{
+	list-style: none;
+}
+
 body {
     padding: 0pt;
     margin: 0pt;
@@ -296,6 +300,37 @@ hr.hr2{
     border-top: 1px solid #bbe2f0;
     border-bottom: 1px solid #bbe2f0;
 }
+
+
+
+/* 슬라이드 */
+
+#slides li{
+	max-width:100%;
+	
+	width:100%; 
+}
+
+
+
+/* 슬라이드 버튼 */
+/* .on_off{
+    border: 1px solid red;
+	margin:0 auto;
+	width:75px;
+	position:relative;
+	bottom:50px;
+	overflow: hidden;
+}
+.on_off li{
+	float:left;
+	margin:5px;
+}
+.on_off i{
+	font-size:15px;
+	color:white;
+	cursor: pointer;
+} */
 
 
 /* footer */
@@ -636,6 +671,7 @@ hr.hr2{
 
 .control{
     padding-bottom: 10px;
+    width: auto;
 }
 
 .label{
@@ -677,7 +713,7 @@ hr.hr2{
 }
 
 
-.contro-address button{
+.control button{
     width: 16%;
     line-height: 20px;
     color: rgb(250, 244, 244);
@@ -691,7 +727,7 @@ hr.hr2{
 }
 
 .control .cardselect{
-    width: 105%;
+    width: 100%;
     line-height: 20px;
     color: #555;
     padding: 12px;
@@ -716,13 +752,13 @@ hr.hr2{
     background-color: #01a1dd;
     color: #f3f3f3;
     font-weight: normal;
-    padding: 8px;
+    padding: 15px;
     cursor: pointer;
     font-size: 14px;
     letter-spacing: 1.5px;
     text-align: center;
     vertical-align: middle;
-    height: 25px;
+
 }
 
 .t11{
@@ -744,3 +780,90 @@ hr.hr2{
     line-height: 20px;
     text-decoration: none !important;
 }
+
+
+
+/* info */
+.containerbox{
+    min-height: auto;
+    padding: 0;
+    width: auto;
+}
+
+.pos{
+position: relative;
+}
+
+.manpicture{
+    height: 16rem;
+    background-image: url("img/info1.jpg");
+}
+
+.pos_1{
+    max-width: 960px;
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    height: 100%;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.pos_2{
+    vertical-align: middle;
+    display: table-cell;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pos_2 h2{
+    font-weight: 400;
+    line-height: 1;
+    font-size: 32px;
+    vertical-align: inherit;
+}
+
+.mc_1{
+    max-width: 48rem;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+.mc_1 h3{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+
+.mc_1 .p1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    vertical-align: inherit;
+}
+
+.mc_1 .p2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.6;
+    vertical-align: inherit;
+}
+
+.mc_2 img{
+    background-image: url("img/info2.jpg");
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    width: 100%;
+}
+
