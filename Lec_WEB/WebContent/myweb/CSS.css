@@ -35,8 +35,6 @@ div#box{
    
 }
 
-
-
 /* 네비게이션 */
 
 nav{
@@ -48,10 +46,10 @@ nav{
 }
 
 div.firstpic{
-    margin-left: 650px;
-    float: left;
-
+float: left;
 }
+
+
 
 /* 메인메뉴 */
 div.menu1 li{
@@ -79,13 +77,12 @@ div.menu1 li a{
     text-decoration: none;
 }
 
-
 .menudetail a:hover{
     text-decoration: none;
     color:  #01a1dd;
 }
 
-
+/* sign, subscribe */
 div.menu2 li{
     float: right; 
     margin: 0 5px;
@@ -119,12 +116,7 @@ div.menu2 li :hover{
     display: none;
     margin-left: 15px;
     padding: 0;
-    margin: 0 0 10px 25px;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+
 }
 
 .arrow {
@@ -286,12 +278,7 @@ hr{
     color: #0476a0;;
     text-align: center;
     display: block;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding: 0;
-    margin: 0;
+
 }
 
 hr.hr2{
@@ -305,32 +292,29 @@ hr.hr2{
 
 /* 슬라이드 */
 
-#slides li{
-	max-width:100%;
-	
-	width:100%; 
+#slider{
+    position: relative;
+    display: block;
 }
 
 
+#slides{
+    text-align: center;
+    width:100%; 
+    padding: 0px;
+    display: table;
+}
 
-/* 슬라이드 버튼 */
-/* .on_off{
-    border: 1px solid red;
-	margin:0 auto;
-	width:75px;
-	position:relative;
-	bottom:50px;
-	overflow: hidden;
+#slide_img{
+    display: table-cell;
+    padding-right: auto;
+    padding-left: auto;
 }
-.on_off li{
-	float:left;
-	margin:5px;
+
+#slide_img img{
+    margin: 0px 10px 0px 10px;
 }
-.on_off i{
-	font-size:15px;
-	color:white;
-	cursor: pointer;
-} */
+
 
 
 /* footer */
@@ -697,19 +681,7 @@ hr.hr2{
     height: auto;
     background-color: #fff;
     border: 1px solid #ccc;
-}
-
-
-.contro-address input{
-    width: 80%;
-    line-height: 20px;
-    color: #555;
-    margin: 3px 4px 10px 0px;
-    padding: 8px;
-    height: auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    
+    border-radius: 3px;
 }
 
 
@@ -723,6 +695,8 @@ hr.hr2{
     background-color:#01a1dd;
     border: 1px solid #ccc;
     cursor: pointer;
+    border-radius: 3px;
+    border: none;
 
 }
 
@@ -732,14 +706,11 @@ hr.hr2{
     color: #555;
     padding: 12px;
     height: auto;
+    border-radius: 3px;
 }
-
-
-
 
 .t10{
     padding-top: 10px;
-    
 }
 
 .t10 input:hover{
@@ -758,6 +729,7 @@ hr.hr2{
     letter-spacing: 1.5px;
     text-align: center;
     vertical-align: middle;
+    border: none;
 
 }
 
@@ -865,5 +837,115 @@ position: relative;
     vertical-align: middle;
     border: 0;
     width: 100%;
+}
+
+/* form 뜨게하기 */
+.modal {
+    width: 100%; 
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    padding-top: 150px;
+    display: none;  /* 처음에는 팝업 안보이게 하기 */
+}
+
+.modal-content {  /* 모달 팝업 안의 form */
+    background-color:white;
+    width: 50%;
+    margin: 5px auto;
+    border: 2px solid rgb(139, 190, 238);
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+/* x표 있는 라인*/
+.imgcontainer {
+    text-align: center;  /* 이미지 중앙 정렬 */
+    margin: 5px 0 5px 0;  /* 바깥 여백 */
+    position: relative;
+    
+}
+
+/* 닫기 버튼 (x) */
+.close { 
+    font-size: 27px;
+    font-weight: bold;
+    color: rgb(110, 9, 110);
+    /* position 설정하여 우상단으로 배치 */
+    position: absolute;
+    right: 20px;
+}
+
+.close:hover, .close:focus {
+    color: rgb(8, 110, 243);
+    cursor: pointer;
+}
+
+.fmtitle{
+    font-size: 20px;
+    text-align: center;
+}
+
+.fmsubtitle{
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 0;
+}
+
+/* 선택지들 */
+.db{
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+.dib{
+    height: 50px;
+    color: #333;
+    width: 40%;
+    border: 1px solid #858c8d;
+    display: inline-block;
+    padding: 5px 0;
+    margin: 5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fmsubmit{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.fmsub{
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    background-color: #01a1dd;
+    border: none;
+    font-weight: 400;
+    padding: 10px 10px;
+    width: 250px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fmsubmit a{
+    color: #01a1dd;
+    text-decoration: none;
+}
+
+/* 애니메이션 */
+.animate {
+    animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
 }
 

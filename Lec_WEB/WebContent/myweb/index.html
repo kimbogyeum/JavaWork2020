@@ -11,12 +11,12 @@
 </head>
 <body>
 <!-- 메뉴 -->   
-<div id=box>
+<div id="box">
 무료 배달을 경험해보세요 
 </div> 
 <nav>
-    
     <div id="menu">
+        <div class="firstpic"><a href="index.html"><img src="img/blue bottle.jpg"  width="64" height="60" alt="bluebottle"></a></div>
         <div class="menu1">
                 <ul>
                 <li>
@@ -47,8 +47,7 @@
                     <li><a href="#">FAQs</a></li>
                 </ul> 
             </li></ul>
-        </div>
-        <div class="firstpic"><a href="index.html"><img src="img/blue bottle.jpg"  width="64" height="60" alt="bluebottle"></a></div>
+        </div>     
         <div class="menu2">
             <ul>
                 <li><a href="#"> SUBSCRIBE </a></li>
@@ -78,22 +77,62 @@
                         Great coffee takes many forms. There is no one profile that we’re after, but we want every coffee to be delicious and, at times, provocative and unexpected.
                     </div>
                     <div class="main2-23">
-                        <a href="#">  퍼스널 커피를 선택할 수 있습니다 </a>
+        <a id="Btn" href="#">  퍼스널 커피를 선택할 수 있습니다 </a>
+        <div id="id01" class="modal">
+            <!-- Form : 이 위치에 form 을 넣습니다 -->	
+            <form class="modal-content animate" action="https://www.w3schools.com/action_page.php" method="post">
+                  <!-- 닫기버튼  -->
+                 <div class="imgcontainer"><span class="close">&times;</span></div>
+     
+                <div class="fmtitle">
+                    <div class="fm1">Which brewing methods do you prefer at home?</div>
+                </div>
+                <div class="fmsubtitle">
+                    <div class="fm2">Select all that apply.</div>
+                </div>
+                <div class="fmdetail">
+                    <div class="db">
+                        <div class="dib"><p> French press</p></div>
+                        <div class="dib"><p>Coffee maker</p></div>
                     </div>
+                    <div class="db">
+                        <div class="dib"><p>Pour over</p></div>
+                        <div class="dib"><p>Chemex</p></div>
+                    </div>
+                    <div class="db">
+                        <div class="dib"><p>Espresso</p></div>
+                        <div class="dib"><p>AeroPress</p></div>
+                    </div>
+                    <div class="db">
+                        <div class="dib"><p>Cold brew</p></div>
+                        <div class="dib"><p>Other</p></div>
+                    </div>
+                </div>
+                <div class="fmsubmit">
+                    <button class="fmsub">Continue</button>
+                    <div>
+                        <a href="#">I'm not sure. Skip.</a>
+                    </div>
+                </div>
+            
+
+            </form>
+        
+        </div>
+                    </div>
+
                 </div>
             </hr>
         </div>
+
+
         <div class="main2-2">
             <hr class="hr2"></hr>
             <h3 class="main2title">TODAY'S PICK</h3>
             <div class="slider">
                 <ul id="slides">
-                    <li id="slide_img"><img src="img/slide_1.jpg" height="500px" width="400px" alt=""></li>
-                    <!-- <li id="slide_img"><img src="img/slide_1.jpg" height="500px" width="400px" alt=""></li> -->
+                    <li id="slide_img"><img class="pic1" src="img/slide_1.jpg" height="500px" width="400px" alt=""><img class="pic2" src="img/slide_1.jpg" height="500px" width="400px" alt=""></li>
                 </ul>
-
-
-
             </div>
         </div>
         <div class="main2-3"></div>
