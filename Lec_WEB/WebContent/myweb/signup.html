@@ -58,7 +58,8 @@
                 <div class="ih-body"> By creating an account, you will be able to manage your subscriptions</div>
             </div>
             <div class="signform">
-                <form class="classform" action="https://www.w3schools.com/action_page.php" >
+                <form class="classform" action="https://www.w3schools.com/action_page.php" method="get"
+                onsubmit="return chkSubmit6()">
                     <div class="control">
                         <label class="label" for="name">이름
                             <span class="red"><abbr title="required">*</abbr></span>
@@ -72,17 +73,16 @@
                             <input type="email" name= "email" maxlength="50" placeholder="E-mail" required/>
                     </div>
                     <div class="control">
-                        <!-- <label class="label" for="password"> -->
-                            Password:
+                        <label class="label" for="password">비밀번호
                             <span class="red"><abbr title="required">*</abbr></span>
                         </label>
-                        <input type="text" name= "password" maxlength="10" placeholder="password" required/>
+                        <input type="text" id= "Password" class="pw" placeholder="password" required/>
                     </div>
                     <div class="control">
                         <label class="label" for="passconfirm">비밀번호를 확인해주세요
                             <span class="red"><abbr title="required">*</abbr></span>
                         </label>
-                            <input type="text" name= "passconfirm" maxlength="10" placeholder="confirm the password" required/>
+                            <input type="text" id= "passconfirm" class="pw" placeholder="confirm the password" required/>
                     </div>
                     <div class="control">
                         <label class="label" for="address">주소
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <div class="t10">
-                       <input type="submit" value="SIGN UP" method="get" onsubmit="return chkSubmit6()">
+                       <input type="submit" value="SIGN UP" >
                     </div>
                     <div class="t11">
                         <span class="t11a">이미 계정이 있으신가요? </span>
@@ -194,7 +194,32 @@
         </div>
     </div>
 </body>
+
+
+
+<script>
+    // 비밀번호 패턴 및 비밀번호 일치여부 
+        var passwordPat=/(?=.*\d{1,50})(?=.*[~`!@#$%\^&*()-+=]{1,50})(?=.*[a-zA-Z]{2,50}).{8,50}$/;
+        function chkSubmit6(){
+            var password=document.getElementById("Password").value;
+            var pwdconfirm = document.getElementById("passconfirm").value;
+
+            if(!passwordPat.test(password)){
+                alert("비밀번호는 숫자, 특문 각 1회 이상, 영문은 2개 이상 사용하여 8자리 이상 입력하세요");
+                return false;
+            }
+
+            if (password != pwdconfirm) {
+                alert ("패스워드가 동일하지 않습니다")
+                return false;
+            }   
+        return true;
+        }
+    
+
+    </script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="JS.js" type="text/javascript"></script>
-<script src="/Scripts/jquery.validate.js"></script>
+
 </html>
