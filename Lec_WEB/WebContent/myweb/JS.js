@@ -18,8 +18,8 @@ $(function(){
 
 
     function slideImg(){
-		$("#main").css('background-image','url(img/main'+check+'.jpg');
-		$('#slide_img img.pic1').stop(true).css({'opacity': 1}).animate({'opacity': 1}, 1500);
+		$("#main").stop(true).css('background-image','url(img/main'+check+'.jpg');
+		$('#slide_img img.pic1').stop(true).css({'opacity': 0.3}).animate({'opacity': 1}, 1500);
 
     	$('#slide_img img.pic1').attr('src', 'img/slide_'+check+'.jpg');
 		$('#slide_img img.pic1').stop(true).css({'opacity': 0.3}).animate({'opacity': 1}, 1500);
@@ -28,7 +28,6 @@ $(function(){
     	$('#slide_img img.pic2').stop(true).css({'opacity': 0.3}).animate({'opacity': 1}, 1500);
     }
 	
-
 
 
 	

@@ -68,12 +68,7 @@ div.menu1 li a{
 }
 
 /* 서브메뉴 */
-.menudetail{
-   position: absolute;
-    background-color: white;
-    color: #333;
 
-}
 
 .menudetail a{
     text-decoration: none;
@@ -118,6 +113,7 @@ div.menu2 li :hover{
     display: none;
     margin-left: 15px;
     padding: 0;
+    position: absolute;
 
 }
 
