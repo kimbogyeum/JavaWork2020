@@ -21,7 +21,7 @@ public class HelloServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		System.out.println("안녕하세요 첫번째 Servlet 입니다..");
 		
 		// 서블릿으로 HTML 문서 response 하기
