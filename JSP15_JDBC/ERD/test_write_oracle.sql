@@ -21,6 +21,8 @@ CREATE TABLE test_write
 -- 시퀀스
 CREATE SEQUENCE TEST_WRITE_SEQ;
 
+DELETE FROM TEST_WRITE WHERE WR_UID >10;
+
 SELECT * FROM test_write;
 
 -- 기본데이터 작성
