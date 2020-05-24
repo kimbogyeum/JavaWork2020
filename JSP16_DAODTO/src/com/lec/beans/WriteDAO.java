@@ -38,7 +38,7 @@ public class WriteDAO {
 		
 	} // 생성자
 
-	// DB 자원 반납 메소드,
+	// DB 자원 반납 메소드,만들어놓으면 편함
 	public void close() throws SQLException {
 		if(rs != null) rs.close();
 		if(pstmt != null) pstmt.close();

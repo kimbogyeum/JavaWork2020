@@ -5,11 +5,6 @@
 <%@ page import="com.lec.beans.*" %>
 <jsp:useBean id="dao" class="com.lec.beans.WriteDAO"/>
 
-<%  // parameter 받아오기
-	int uid = Integer.parseInt(request.getParameter("uid"));
-	// ※ 이 단계에서 parameter 검증 필요
-%>
-
 <%
 	//dao 사용한 트랜잭션
 	WriteDTO [] arr=(WriteDTO [])request.getAttribute("view");
@@ -30,6 +25,7 @@
 %>
 
 <%
+	int uid = arr[0].getUid();
 	String name=arr[0].getName();
 	String subject=arr[0].getSubject();
 	String content=arr[0].getContent();

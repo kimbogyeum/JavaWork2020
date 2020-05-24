@@ -2,17 +2,11 @@
     pageEncoding="UTF-8"%>
 
 <%@ page import="com.lec.beans.*" %>
-<jsp:useBean id="dao" class="com.lec.beans.WriteDAO"/> <%--DAO bean 생성 --%>
 
-<%
-	//parameter 받아오기
-	int uid=Integer.parseInt(request.getParameter("uid"));
-	//※이 단계에서 parameter 검증 필요
-	
-%>
 
 <% //DAO 사용한 트랜잭션
-	WriteDTO [] arr=dao.selectByUid(uid);
+	WriteDTO [] arr=(WriteDTO [])request.getAttribute("list");
+	int uid = Integer.parseInt(request.getParameter("uid"));
 %>
 
 
@@ -29,6 +23,7 @@
 	
 %>
 <%
+
 	String name = arr[0].getName();
 	String subject = arr[0].getSubject();
 	String content = arr[0].getContent();
@@ -60,7 +55,7 @@ function chkSubmit(){
 
 <body>
 <h2>수정 <%= subject %></h2>
-<form name="frm" action="updateOk.jsp" method="post" onsubmit="return chkSubmit()">
+<form name="frm" action="updateOk.do" method="post" onsubmit="return chkSubmit()">
 <%--post로 보낼때는 form같은 형태로 보내야 하고 uid는 수정할거 아니니까! hidden 쓰기 --%>
 <input type="hidden" name="uid" value="<%=uid %>"/> 
 작성자 : <%= name %><br><%--작성자 이름 변경불가 --%>
@@ -73,7 +68,7 @@ function chkSubmit(){
 
 </form>
 <button onclick="history.back()">이전으로</button>
-<button onclick="location.href='list.jsp'">목록보기</button>
+<button onclick="location.href='list.do'">목록보기</button>
 
 </body>
 </html>

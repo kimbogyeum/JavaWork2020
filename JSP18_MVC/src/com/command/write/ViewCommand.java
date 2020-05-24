@@ -20,17 +20,12 @@ public class ViewCommand implements Command {
 		
 		try {
 		
-			arr=dao.selectByUid(uid);
+			arr=dao.readByUid(uid);
 			request.setAttribute("view", arr);
 			
 		} catch(SQLException e) {
 			e.printStackTrace();
 		}
-		
-
-		
-
-		
 		
 		
 	}

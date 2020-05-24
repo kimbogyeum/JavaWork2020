@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     
 <jsp:useBean id="person1" class="com.lec.beans.Person" scope="page"/>
+
 <%--
 내부적인 동작
 	Person person1=new com.lec.beans.Person(); //기본생성자 호출 
