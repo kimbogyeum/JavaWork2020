@@ -104,7 +104,7 @@
 
 				<Context docBase="JSP15_JDBC" path="/JSP15_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:JSP15_JDBC"/>
 				<Context docBase="JSP18_MVC" path="/JSP18_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_MVC"/>
-			<Context docBase="JSP11_Cookie" path="/JSP11_Cookie" reloadable="true" source="org.eclipse.jst.jee.server:JSP11_Cookie"/><Context docBase="JSP14_JavaBean" path="/JSP14_JavaBean" reloadable="true" source="org.eclipse.jst.jee.server:JSP14_JavaBean"/><Context docBase="JSP16_DAODTO" path="/JSP16_DAODTO" reloadable="true" source="org.eclipse.jst.jee.server:JSP16_DAODTO"/></Host>
+			<Context docBase="JSP11_Cookie" path="/JSP11_Cookie" reloadable="true" source="org.eclipse.jst.jee.server:JSP11_Cookie"/><Context docBase="JSP14_JavaBean" path="/JSP14_JavaBean" reloadable="true" source="org.eclipse.jst.jee.server:JSP14_JavaBean"/><Context docBase="JSP16_DAODTO" path="/JSP16_DAODTO" reloadable="true" source="org.eclipse.jst.jee.server:JSP16_DAODTO"/><Context docBase="JSP21_EL" path="/JSP21_EL" reloadable="true" source="org.eclipse.jst.jee.server:JSP21_EL"/><Context docBase="JSP22_JSTL" path="/JSP22_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:JSP22_JSTL"/></Host>
 		</Engine>
 	</Service>
 </Server>
