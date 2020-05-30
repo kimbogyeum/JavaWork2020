@@ -18,7 +18,7 @@
 
 ${myage }<br>
 ${requestScope.myage }<br>
-<%--scope 가 request-page-session-application의 우선순위로 인해 흥~!이 먼저 나옴 --%>
+<%--scope 가 page- request-session-application의 우선순위로 인해 흥~!이 먼저 나옴 --%>
 
 <%--toString() 값 --%>
 ${mydto}<br>

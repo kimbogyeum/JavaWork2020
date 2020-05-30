@@ -1,1 +1,1 @@
-{"resources":{"ERD/bk_user.sql":{"sql-editor-data-source-id":"oracle_thin-17235e64387-2703ce4aa33b8b5a","default-schema":"SCOTT0316"}}}
+{"resources":{"ERD/bk_user.sql":{"default-schema":"SCOTT0316","sql-editor-data-source-id":"oracle_thin-17235e64387-2703ce4aa33b8b5a","default-datasource":"oracle_thin-17235e64387-2703ce4aa33b8b5a"}}}

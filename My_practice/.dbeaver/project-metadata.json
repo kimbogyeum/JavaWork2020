@@ -1,1 +1,1 @@
-{"resources":{"my_prac/Dml.sql":{"sql-editor-data-source-id":"oracle_thin-1715e089b97-7eeeb8f22acb4bd0","default-schema":"SCOTT0316"}}}
+{"resources":{"my_prac/Dml.sql":{"default-schema":"SCOTT0316","sql-editor-data-source-id":"oracle_thin-17251d5f686-6f6878a6be10fac7","default-datasource":"oracle_thin-17251d5f686-6f6878a6be10fac7"}}}
