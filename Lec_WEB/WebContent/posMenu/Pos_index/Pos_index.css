@@ -32,7 +32,7 @@ body{
     left: 0;
     width: 100%;
     height: 15px;
-    background: #044581;
+    background: #033564;
     transform-origin: bottom;
     transform:skewX(45deg);
     transition: 0.5s;

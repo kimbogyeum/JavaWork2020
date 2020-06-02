@@ -104,7 +104,7 @@
 
 				
 				
-			<Context docBase="JSP19_AJAX" path="/JSP19_AJAX" reloadable="true" source="org.eclipse.jst.jee.server:JSP19_AJAX"/><Context docBase="JSP003_EMAIL" path="/JSP003_EMAIL" reloadable="true" source="org.eclipse.jst.jee.server:JSP003_EMAIL"/><Context docBase="JSP18_MVC" path="/JSP18_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_MVC"/></Host>
+			<Context docBase="JSP18_MVC" path="/JSP18_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_MVC"/><Context docBase="JSP20_FileUpload" path="/JSP20_FileUpload" reloadable="true" source="org.eclipse.jst.jee.server:JSP20_FileUpload"/></Host>
 		</Engine>
 	</Service>
 </Server>
