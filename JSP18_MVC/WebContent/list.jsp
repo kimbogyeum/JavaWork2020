@@ -2,8 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="com.lec.beans.*" %>    
 
-
-<% // Controller로부터 결과데이터를 받음. 
+<%  // Controller 로부터 결과 데이터 받음.
 	WriteDTO [] arr = (WriteDTO [])request.getAttribute("list");
 %>
 
@@ -54,6 +53,7 @@ table, th, td {
 
 
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

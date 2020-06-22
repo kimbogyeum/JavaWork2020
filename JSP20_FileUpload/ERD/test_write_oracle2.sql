@@ -40,6 +40,12 @@ ALTER TABLE test_file
 ;
 
 
+select * from test_file where wr_uid =wr_uid;
+DELETE FROM test_file where wr_uid =wr_uid;
+select * from TEST_WRITE where wr_uid =wr_uid;
+
+
+
 --시퀀스 작성
 CREATE SEQUENCE test_file_seq;
 

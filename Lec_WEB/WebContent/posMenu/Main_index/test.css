@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 *{
   font-family: "Avenir Next", "Century Gothic", "Franklin Gothic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif,'Nanum Gothic Coding', monospace;
   letter-spacing: 1px;
@@ -14,7 +15,7 @@
 
 video#bgvideo {
     position: fixed;
-    top: 70%;
+    top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
@@ -31,64 +32,153 @@ video#bgvideo {
     
 /* 동영상 위 글씨 */
 .vid-text {
-  margin: 150px 100px 0px 100px;
+  /* margin: 60px 100px 0px 100px; */
+  position: fixed;
+  top: 20%;
+  left: 4%;
   max-width: 55%;
   vertical-align: middle;
-  color:#fff;
-
+  color: #fff;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 2% 3%;
+  background-color: rgba(46, 39, 39, 0.219);
 }
 .vid-h1{
-  font-size: 39px;
-  margin-bottom: 50px;
-  font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold
 }
 .vid-h2{
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 30px;
   font-weight: 800;
 }
 .vid-h3{
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 50px;
   font-weight: 600;
   line-height: 150%;
   font-weight: 200;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 /* 버튼 */
-.vid-txt-1{
-  padding: px 60px;
-
+.vid-txt-1 {
+  position: fixed;
+  left: 55%;
+  top: 73%;
+  width: 53%;
 }
-
-.vid-txt-1 div{
-  margin: 100px 80px;
-  padding: 50px 50px;
-  background-color: rgb(37, 37, 85);
-  opacity: 80%;
-  position: relative;
-  width: 10%;
-  display: inline-block;
+.button {
+  box-sizing: border-box;
+  /* height: 50px;
+  width: 400px; */
+  display: table;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
+  transition: background 0.5s;
+  cursor: pointer;
+  float: left;
+  margin-right: 60px;
+  border-radius: 20px;
 }
-
-.vid-txt-1 a{
-  font-size: 20px;
-  text-decoration: none;
-  color: rgb(247, 232, 211);
+.button span {
+  width: 330px;
+  height: 40px;
+  padding: 35px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #e0e1e6;
+  box-shadow: 0 0 0 3px #bbbec9 inset;
+  background:  rgba(8, 8, 8, 0.219);
+  border-radius: 20px;
+ 
+}
+.button .away {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  
+}
+.button .over {
+  display: none;
+  
+  
+}
+.button:hover span.away {
+  display: none;
+  
+}
+.button:hover span.over {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  color: white;
+  box-shadow: none;
+  
+  
+}
+.button:hover {
+  background-color: rgb(36, 30, 63);
+  border-radius: 20px;
 }
 
 /* foot3 */
-.language{
-  background-color:rgb(245, 243, 241);
-  padding: 15px 0px;
-  position: absolute;
+.language {
+  background-color: rgb(255, 252, 250);
+  padding: 6px 0px;
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 3%;
+  text-align: left;
+  position: fixed;
+  
 }
 
-.lan{
-  margin-right: auto;
-  margin-left: auto;
-  width: 480px;
+
+body{
+    overflow:hidden;
+    margin: 0;
 }
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(26, 26, 26);
+    opacity: 0.7;
+}
+
+#logoimg{
+    padding-top: 10px;
+    padding-left: 15px;
+    height: 45px;
+    width: 45px;
+    text-align: left;
+}
+span{
+   font-size: 30px;
+   color: white;
+}
+b{
+    
+    position: fixed;
+    margin: 13px 10px;
+}
+
+.lan {
+  color: rgb(26, 26, 26);
+  opacity: 0.7;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  margin: auto;
+
+  margin-bottom: 6px;
+}
+/* .lan2{
+  color: rgb(26, 26, 26);
+  opacity: 0.7;
+  font-size: 15px;
+  text-align: center;
+  margin: auto;
+} */

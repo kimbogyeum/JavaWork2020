@@ -1,16 +1,16 @@
 package com.lec.beans;
 
+// Person 빈(bean) 객체 정의
 public class Person {
 	private String name;
 	private int age;
 	private int id;
 	private String gender;
 
-	
-	//기본생성자, 매개변수생성자, getter/setter
+	// 기본생성자, 매개변수 생성자, getter/setter 
 	public Person() {
 		super();
-	}//기본생성자가 없으면 안된다. 
+	}
 	
 	public Person(String name, int age, int id, String gender) {
 		super();
@@ -23,9 +23,14 @@ public class Person {
 		return name;
 	}
 	public void setName(String name) {
-		
+		System.out.println("setName() 호출");
 		this.name = name;
 	}
+	public void setname(String name) {
+		System.out.println("setname() 호출");
+		this.name = name;
+	}
+	
 	public int getAge() {
 		return age;
 	}
@@ -45,7 +50,13 @@ public class Person {
 		this.gender = gender;
 	}
 	
-
-	
 	
 }
+
+
+
+
+
+
+
+

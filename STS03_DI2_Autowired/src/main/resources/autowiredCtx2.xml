@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+
+
+	<!-- namespace 바꿔주고+↓이거 꼭 해줘야 해 -->
+	<context:annotation-config/>
+	
+	
+	<bean id="dao" class="com.lec.beans.DAO">
+		<constructor-arg value="DAO_MEMBER"/>
+		<qualifier value="memberDAO"/>
+	</bean>
+
+	<!--DAO 가 두개생긴다면? NoUniqueBeanDefinitionException 에러 뜸-->
+	<bean id="dao2" class="com.lec.beans.DAO">
+		<constructor-arg value="DAO_BOARD"/>
+		<qualifier value="boardDAO"/>
+	</bean>
+	
+	<bean id="listService" class="com.lec.beans.ListService"/>
+
+	
+	<!-- 동일 DAO 객체 여러개인데 qualifier가 지정되어있지 않으면 이름이 같은것으로 찾는다. -->
+	<bean id="myDao" class="com.lec.beans.DAO">
+		<constructor-arg value="DAO_VOTE"/>
+	</bean>
+	
+	<bean id="viewService" class="com.lec.beans.ViewService"/>
+	
+</beans>

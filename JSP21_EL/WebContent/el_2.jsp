@@ -26,12 +26,12 @@
 	uid : ${dto.uid }<br>
 	제목 : ${dto.subject }<br>
 	작성자 : ${dto.name }<br>
-	<%--댓글: ${dto.comment }<br> --%>
+	<%--댓글 : ${ddd.comment }<br>--%>
+	
 	<hr>
-	
-	
 
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

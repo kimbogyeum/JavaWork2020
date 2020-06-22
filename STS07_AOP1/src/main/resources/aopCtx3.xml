@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<aop:aspectj-autoproxy/>
+	
+	<bean id="LogAop" class="com.lec.spring.aop03.LogAspect3"/>
+	
+	<!--  이전 패키지에 있던것도 다가져오자 -->
+	<bean id="service21" class="com.lec.spring.aop02.MyService21"/><!-- 메소드 printInfo 제외 1개 -->
+	<bean id="service22" class="com.lec.spring.aop02.MyService22"/><!-- 메소드 printInfo 제외 1개 -->
+	
+	<bean id="serviceEx31" class="com.lec.spring.aop03.MyServiceEx31"/><!-- 메소드 printInfo 제외 3개 -->
+	<bean id="serviceEx32" class="com.lec.spring.aop03.MyServiceEx32"/><!-- 메소드 printInfo 제외 3개 -->
+
+</beans>

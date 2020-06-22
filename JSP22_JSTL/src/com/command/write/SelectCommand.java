@@ -1,5 +1,4 @@
 package com.command.write;
-
 import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
@@ -7,29 +6,20 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.lec.beans.WriteDAO;
 import com.lec.beans.WriteDTO;
-
 public class SelectCommand implements Command {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		WriteDAO dao=new WriteDAO(); //DAO 객체 생성
-		WriteDTO [] arr=null;
-		int uid=Integer.parseInt(request.getParameter("uid"));
-		
+		WriteDAO dao = new WriteDAO();
+		WriteDTO [] arr = null;
+		int uid = Integer.parseInt(request.getParameter("uid"));  // 매개변수 검증 필요
+
 		try {
-			//트랜잭션 수행
-			arr=dao.selectByUid(uid);
-			//request 에 담아서 "리스트"라는 이름으로 controller에 전달된다. 
+			arr = dao.selectByUid(uid);  // 읽기 only
 			request.setAttribute("list", arr);
-			
-		} catch(SQLException e) {
-			//만약 CP 사용하면 
-			//NaimingException 도 처리해야한다. 
+		} catch (SQLException e) { // 만약 ConnectionPool 을 사용한다면 여기서 NamingException 도 catch 해야 한다  
 			e.printStackTrace();
-			
 		}
-
 	}
-
 
 }

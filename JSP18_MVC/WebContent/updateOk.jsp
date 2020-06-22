@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<% //DAO 사용한 트랜잭션
-	int cnt=(Integer)request.getAttribute("result");
+<%  // Controller 로부터 결과 데이터 받음
+	int cnt = (Integer)request.getAttribute("result");
 	int uid = Integer.parseInt(request.getParameter("uid"));
-%>
-
+%>  
 
 <% if(cnt == 0){ %>
 	<script>

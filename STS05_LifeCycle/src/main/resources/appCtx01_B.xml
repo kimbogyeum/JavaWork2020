@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+		<bean id="score2" class="com.lec.beans.Score"
+		c:kor="90" c:eng="80" c:math="85" c:comment="잘해보자잉"/>
+		
+		
+		<!-- 
+			복수개의 설정파일로부터 생성하는 컨텍스트의 경우 중복되는 id 가 있을경우.'나중'에 생성되는 bean이 덮어쓰기 한다. 
+		 -->
+		<bean id="score1" class="com.lec.beans.Score"
+		c:kor="3" c:eng="2" c:math="1" c:comment="과여언"/>
+	
+
+
+
+</beans>

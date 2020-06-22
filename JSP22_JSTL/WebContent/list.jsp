@@ -1,12 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
-
-<%--JSTL 버전으로 바뀌니 
-	import 변잡함도 사라진다.
-	JAVA 변수 선언도 사라진다. --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>  
+<%-- JSTL 버젼으로 바뀌니, import 번잡합도 사라진다. JAVA변수 선언도 사라진다 --%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -34,31 +31,30 @@ table, th, td {
 				<th>조회수</th>
 				<th>등록일</th>
 			</tr>
-
-	<c:choose>
-		<%--없거나 null이거나 , 있긴있는데 길이가0이거나 --%>
-		<c:when test="${empty list ||fn:length(list)==0}">
-		</c:when>
-		<c:otherwise>
-		<c:forEach var="dto" items="${list }">
+	
+		<c:choose>
+			<c:when test="${empty list || fn:length(list) == 0}">
+			</c:when>
+			<c:otherwise>
+			
+			<c:forEach var="dto" items="${list }">
 			<tr>
 				<td>${dto.uid }</td>
 				<td><a href="view.do?uid=${dto.uid }">${dto.subject }</a></td>
 				<td>${dto.name }</td>
-				<td>${dto.viewCnt}</td>
-				<td>${dto.regDate}</td>
-			</tr>
-		</c:forEach>
-		</c:otherwise>
-	</c:choose>
-
+				<td>${dto.viewCnt }</td>
+				<td>${dto.regDate }</td>
+			</tr>			
+			</c:forEach>
+			
+			</c:otherwise>
+		</c:choose>
 
 		</table>
 		<br>
 		<button onclick="location.href='write.do'">신규등록</button>
 
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

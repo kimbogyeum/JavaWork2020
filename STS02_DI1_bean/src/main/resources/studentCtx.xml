@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="scoreA" class="com.lec.spring.Score">
+		<constructor-arg value="90"/>
+		<constructor-arg value="99"/>
+		<constructor-arg value="99"/>
+		<constructor-arg value="좋아좋아"/>	
+	</bean>
+
+	<!-- 생성자 매개변수 reference 타입은 ref 사용 -->
+	<bean id="Hong" class="com.lec.spring.Student" >
+		<constructor-arg value="보숨"/>
+		<constructor-arg value="25"/>
+		<!-- <constructor-arg ref="scoreA"/> -->
+		<constructor-arg>
+			<ref bean="scoreA"/>
+		</constructor-arg>
+	</bean>
+	
+	<!-- setter 와 ref 사용 -->
+	<bean id="Joo" class="com.lec.spring.Student">
+		<property name="name" value="복숭둥"/><!-- setName() 호출 -->
+		<property name="age" value="23"/><!-- setAge() 호출 -->
+		<property name="score" ref="scoreA"/>
+	</bean>
+	
+	
+	
+</beans>

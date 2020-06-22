@@ -42,12 +42,10 @@
 
 <%!
 	// 쿼리문 준비
-	String sql_insert = "INSERT INTO test_write " +
+	final String SQL_WRITE_INSERT = "INSERT INTO test_write " +
 		"(wr_uid, wr_subject, wr_content, wr_name) " +
-		"VALUES(test_write_seq.nextval, ?, ?, ?)"
-		;
+		"VALUES(test_write_seq.nextval, ?, ?, ?)";
 %>
-
 <%
 	try{
 		Class.forName(driver);
@@ -56,7 +54,7 @@
 		out.println("conn 성공" + "<br>");
 		
 		// 트랜잭션 실행
-		pstmt = conn.prepareStatement(sql_insert);
+		pstmt = conn.prepareStatement(SQL_WRITE_INSERT);
 		
 		pstmt.setString(1, subject);
 		pstmt.setString(2, content);
@@ -93,6 +91,45 @@
 		</script>
 
 <% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

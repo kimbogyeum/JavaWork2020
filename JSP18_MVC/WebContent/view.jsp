@@ -1,38 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
 
 <%@ page import="com.lec.beans.*" %>
-<jsp:useBean id="dao" class="com.lec.beans.WriteDAO"/>
 
-<%
-	//dao 사용한 트랜잭션
-	WriteDTO [] arr=(WriteDTO [])request.getAttribute("view");
-
+<% // Controller 로부터 결과 데이터 받음
+	WriteDTO [] arr = (WriteDTO [])request.getAttribute("list");
 %>
 
 <%
-	if(arr==null || arr.length==0){
+	if(arr == null || arr.length == 0){ 
 %>
 			<script>
 				alert("해당 정보가 삭제되거나 없습니다");
 				history.back();
-			</script>	
+			</script>
 <%
-		return;
-	}//end if
-	
+		return;   // 더이상 JSP 프로세싱 하지 않고 종료
+	} // end if
 %>
-
 <%
 	int uid = arr[0].getUid();
-	String name=arr[0].getName();
-	String subject=arr[0].getSubject();
-	String content=arr[0].getContent();
-	String regDate=arr[0].getRegDate();
-	int viewCnt=arr[0].getViewCnt();
-
+	String name = arr[0].getName();
+	String subject = arr[0].getSubject();
+	String content = arr[0].getContent();
+	String regDate = arr[0].getRegDate();
+	int viewCnt = arr[0].getViewCnt();
 %>
+
 
 
 <!DOCTYPE html>
@@ -71,6 +65,21 @@ UID : <%= uid %><br>
 <button onclick="chkDelete(<%= uid %>)">삭제하기</button>
 <button onclick="location.href = 'write.do'">신규등록</button>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

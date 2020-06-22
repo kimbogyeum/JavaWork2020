@@ -17,10 +17,10 @@
 	int cnt = 0;   // DML 결과, executeUpdate()
 	
 	// Connection 에 필요한 값 세팅
-	String driver = "oracle.jdbc.driver.OracleDriver";
-	String url = "jdbc:oracle:thin:@localhost:1521:XE";
-	String userid = "scott0316";
-	String userpw = "tiger0316";
+	final String DRIVER = "oracle.jdbc.driver.OracleDriver";  // JDBC 드라이버 클래스
+	final String URL = "jdbc:oracle:thin:@localhost:1521:XE";  // DB 접속 URL
+	final String USERID = "scott0316";  // DB 접속 계정 정보
+	final String USERPW = "tiger0316";
 %>
 
 <%!
@@ -43,9 +43,9 @@
 
 <%
 	try{
-		Class.forName(driver);
+		Class.forName(DRIVER);
 		out.println("드라이버 로딩 성공" + "<br>");
-		conn = DriverManager.getConnection(url, userid, userpw);
+		conn = DriverManager.getConnection(URL, USERID, USERPW);
 		out.println("conn 성공" + "<br>");
 		
 		// 트랜잭션 실행
@@ -85,7 +85,7 @@
 				history.back();
 			</script>
 <%			
-			return;   // 더이상 JSP 프로세싱 하지 않고 종료
+			return;   // ★더이상 JSP 프로세싱 하지 않고 종료★
 		} // end if
 		
 		// 모든 쿼리 성공하면 commit
@@ -146,4 +146,18 @@ UID : <%= uid %><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

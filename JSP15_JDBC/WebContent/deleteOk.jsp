@@ -3,10 +3,7 @@
 <%@ page import = "java.sql.*"%> <%-- JDBC 관련 import --%>
 
 <% // parameter 받아오기
-	request.setCharacterEncoding("utf-8");  // 한글 인코딩 꼭!
 	int uid = Integer.parseInt(request.getParameter("uid"));
-	String subject = request.getParameter("subject");
-	String content = request.getParameter("content");
 	// ※ 이 단계에서 parameter 검증 필요
 %>
     
@@ -40,7 +37,7 @@
 		
 		// 트랜잭션 실행
 		pstmt = conn.prepareStatement(SQL_WRITE_DELETE_BY_UID);
-		pstmt.setInt(1, uid); //물음표 하나니까
+		pstmt.setInt(1, uid);
 		
 		cnt = pstmt.executeUpdate();
 		
@@ -68,7 +65,7 @@
 <% } else { %>
 	<script>
 		alert('삭제 성공');
-		location.href = "list.jsp";
+		location.href = "list.jsp";  <%-- 삭제후에는 list 로 가자 --%>
 	</script>
 <% } %>
 

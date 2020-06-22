@@ -4,8 +4,6 @@
 DROP TABLE test_write CASCADE CONSTRAINTS;
 
 
-
-
 /* Create Tables */
 
 CREATE TABLE test_write
@@ -18,12 +16,11 @@ CREATE TABLE test_write
 	wr_regdate date DEFAULT SYSDATE,
 	PRIMARY KEY (wr_uid)
 );
+
 -- 시퀀스
 CREATE SEQUENCE TEST_WRITE_SEQ;
 
-DELETE FROM TEST_WRITE WHERE WR_UID >10;
-
-SELECT * FROM test_write;
+SELECT * FROM test_write ORDER BY wr_uid DESC;
 
 -- 기본데이터 작성
 INSERT INTO TEST_WRITE VALUES
@@ -38,8 +35,24 @@ INSERT INTO TEST_WRITE VALUES
 (TEST_WRITE_SEQ.nextval, '다섯째글: 게시판', '7531', '박수찬', 0, sysdate);
 
 
+-- 다량의 데이터 필요
 SELECT * FROM test_write ORDER BY wr_uid DESC;
 
-INSERT INTO TEST_WRITE (WR_UID ,WR_SUBJECT ,WR_CONTENT ,WR_NAME)
-	SELECT test_write_seq.nextval, WR_SUBJECT ,WR_CONTENT ,WR_NAME FROM TEST_WRITE ;
+INSERT INTO test_write(wr_uid, wr_subject, wr_content, wr_name)
+	SELECT test_write_seq.nextval, wr_subject, wr_content, wr_name FROM test_write;
+
+
+DELETE FROM test_write WHERE wr_uid > 10;
+
+
+
+
+
+
+
+
+
+
+
+
 

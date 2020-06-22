@@ -18,7 +18,7 @@
 		
 		<script>
 			alert('수정 성공');
-			location.href = "view.do?uid=${param.uid}";
+			location.href = "view.do?uid=${uid}";//multipart request이므로 그냥 uid로 updateCommand 고치고 바꿔줘야한다.
 		</script>
 	</c:otherwise>
 

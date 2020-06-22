@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	
+	<!-- namespace 바꿔주고 + ↓ 이거 꼭 해줘야 해 -->
+	<context:annotation-config/>
+
+ 
+	
+<!-- 	<bean id="dao1" class="com.lec.beans.DAO"> -->
+ 		<!-- DAO의 uid값 -->
+<!-- 		<constructor-arg value="DAO_1"/> -->
+<!-- 	</bean> -->
+
+	
+	
+	<!-- ↑위에 기존의 DAO 지우고 상속받은 DAOEx로 새로운 bean을 만들어주면 다 DAO에서 DAOEx로 바뀜  -->
+	<bean id="dao1" class="com.lec.beans.DAOEx">
+		<constructor-arg value="DAO_EX"/>
+	</bean>
+	
+	<bean id="regService" class="com.lec.beans.RegisterService">
+		<constructor-arg ref="dao1"/>
+	</bean>
+	
+	<!-- 이건 에러다.. 기본생성자가 없기 때문에, RegisterService 는 반드시 DAO 가 필요하다!
+	<bean id="regService" class="com.lec.beans.RegisterService"/>
+	  -->
+	  
+	<!-- 생성자가 없지만  위의 dao1으로 자동 생성해준다. 그래서 에러가 안남.   -->  
+	<bean id="readService" class="com.lec.beans.ReadService"/>
+	
+	
+	<bean id="updateService" class="com.lec.beans.UpdateService"/>
+
+	<!-- setter 하나 만들어줬으면 property 사용해서 불러줘야하잖아. 근데 안썼으니까 NullPointException 에러 뜰수밖에  -->
+	<!-- 그치만 setter에 @Autowired 가 설정되어있다면 가능하쥐. -->
+	<bean id="deleteService" class="com.lec.beans.DeleteService"/>
+	
+	
+	
+</beans>

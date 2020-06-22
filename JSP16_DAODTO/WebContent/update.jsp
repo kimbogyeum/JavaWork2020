@@ -67,6 +67,7 @@ function chkSubmit(){
 <button onclick="history.back()">이전으로</button>
 <button onclick="location.href='list.jsp'">목록보기</button>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 
