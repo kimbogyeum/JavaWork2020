@@ -6,6 +6,6 @@
 </form>
 
 <form action="regOk2" method="post">
-	<input type="text" name="name" value="보겸이"/>
+	<input type="text" name="name" value="복숭둥"/>
 	<input type="submit" />
 </form>

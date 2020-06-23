@@ -41,7 +41,8 @@ public class HomeController {
 	// parameter 추출
 	// handler 메소드에서도 서블릿에서 보았던 HttpServletRequest, HttpServletResponse 매개변수 가능!
 	@RequestMapping(value = "/member/delete") // -> /member/delete?id=34
-	public String delMember(HttpServletRequest request,Model model) {//model이랑 request랑 자리 바꿔도 됨.type 따라가는거지 순서 따라가는게 아님. 
+	public String delMember(HttpServletRequest request,Model model) {
+		//model이랑 request랑 자리 바꿔도 됨.type 따라가는거지 순서 따라가는게 아님. 
 		String id=request.getParameter("id");
 		model.addAttribute("mbId",id);
 
@@ -66,10 +67,14 @@ public class HomeController {
 		return "member/regOk";
 	}
 	
+	
+	//POST 방식으로 해주자 
 	@RequestMapping(value = "/member/regist")
 	public String registMember() {
 		return "member/regist";
 	}
+	
+	
 	
 	//GET, POST 둘다 다됨. 
 	@RequestMapping(value="/member/regOk2", method = {RequestMethod.GET,RequestMethod.POST})
