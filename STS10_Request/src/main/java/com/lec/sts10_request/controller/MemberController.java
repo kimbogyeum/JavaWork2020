@@ -17,10 +17,9 @@ public class MemberController {
 		return "member/load";
 	}
 	
+	
 //	@RequestMapping(value = "/search")  // -> /member/search  (중복!)
 //	public String searchMember() {
 //		return "member/search";
 //	}
-	
-	
 }

@@ -10,8 +10,8 @@
 <body>
 
 
-<a href="http://localhost:8082/sts10_request/board/write">write</a>
-<a href="http://localhost:8082/sts10_request/board/view">view</a>
+<a href="<%= request.getContextPath() %>/board/write">write</a>
+<a href="<%= request.getContextPath() %>/board/view">view</a>
 
 </body>
 </html>
