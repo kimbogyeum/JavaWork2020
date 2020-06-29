@@ -32,6 +32,12 @@ function chkSubmit(){  // 폼 검증
 <h2>글작성</h2>
 <%-- 글 내용이 많을수 있기 때문에 POST 방식 사용 --%>
 <form name="frm" action="writeOk" method="post" onsubmit="return chkSubmit()">
+
+<%--int 매개변수 받는 setter 도 동작할까?
+	이게 되면 spring에서 parsing 알아서 해준다는 뜻이지? (여기는 string이지만 setUid는 int로 받아주니까)  --%>
+uid:
+<input type="text" name="uid" value="123"><br>
+
 작성자:
 <input type="text" name="name" value="보겸이"/><br>
 제목:

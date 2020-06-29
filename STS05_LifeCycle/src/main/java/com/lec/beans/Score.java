@@ -77,13 +77,13 @@ public class Score implements InitializingBean, DisposableBean {
 		
 		
 		
-		@Override
+		
 		public void destroy() throws Exception {
 			// bean 소멸 과정에서 호출
 			System.out.println("빈 소멸 destroy() 호출");
 		}
 
-		@Override
+		
 		public void afterPropertiesSet() throws Exception {
 			// bean 초기화 하는 과정에서 호출
 			System.out.println("빈 초기화 afterPropertiesSet() 호출");

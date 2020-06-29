@@ -5,7 +5,6 @@ package com.lec.beans;
 //나중에 Advice로 사용되는 코드 
 
 public class Logger {
-
 		public void logIn() {
 			System.out.println("###Log In 처리 ###");
 			//0.5초정도 delay주기
@@ -27,9 +26,6 @@ public class Logger {
 			}
 		
 		}
-		
-		
-		
-		
-		
+	
 }
+

@@ -5,7 +5,6 @@ import com.lec.beans.Service;
 
 public class MyService11 extends Service {
 	
-	
 	//관심사(공통기능) 코드가 함께 섞여 있는 경우.
 	
 	@Override
