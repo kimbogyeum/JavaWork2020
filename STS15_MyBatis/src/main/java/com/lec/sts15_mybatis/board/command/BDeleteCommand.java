@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.ui.Model;
 
 import com.lec.sts15_mybatis.board.C;
-import com.lec.sts15_mybatis.board.beans.BWriteDAO;
+
 import com.lec.sts15_mybatis.board.beans.IWriteDAO;
 
 public class BDeleteCommand implements BCommand {

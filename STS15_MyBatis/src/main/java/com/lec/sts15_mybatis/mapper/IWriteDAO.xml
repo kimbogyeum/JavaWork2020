@@ -18,21 +18,27 @@
       ORDER BY
          wr_uid DESC 
    </select>  
+   
+   -->
+   
+   
    <insert id="insert" flushCache="true"
-      parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
+      parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO"
+      keyProperty="uid" useGeneratedKeys="true" keyColumn="wr_uid">
       INSERT INTO test_write
          (wr_uid, wr_subject, wr_content, wr_name)
       VALUES
          (test_write_seq.nextval, #{subject}, #{content}, #{name})
    </insert>
- -->
- 
+
+ <!--  
  	<insert id="insert" flushCache="true">
  		 INSERT INTO test_write
          (wr_uid, wr_subject, wr_content, wr_name)
       VALUES
          (test_write_seq.nextval, #{param1}, #{param2}, #{param3})
  	</insert>
+ 	 -->
  	
  	
  	<select id="selectByUid" resultType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
@@ -59,6 +65,7 @@
  		WHERE wr_uid = #{uid}
  	</insert>
  	
+ 	<!-- 
  	<update id="update" flushCache="true" parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
  		UPDATE 
  			test_write 
@@ -66,6 +73,16 @@
  			wr_subject = #{subject}, wr_content = #{content} 
  		WHERE 
  			wr_uid = #{uid}
+ 	</update>-->
+ 	
+ 	<!-- 매개변수 두개인 버전  -->
+ 	<update id="update" flushCache="true" parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
+ 		UPDATE 
+ 			test_write 
+ 		SET 
+ 			wr_subject = #{a.subject}, wr_content = #{a.content} 
+ 		WHERE 
+ 			wr_uid = #{param1}
  	</update>
  	
  	<delete id="deleteByUid" parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
@@ -73,6 +90,10 @@
  			test_write 
  		WHERE wr_uid = #{uid}
  	</delete>
+ 	
+ 	<!-- ㅡMybatipse 사용해서 해보기 
+ 	<select id="searchBySubject" resultType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
+ 	</select> -->
 
  
 </mapper>

@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.ui.Model;
 
 import com.lec.sts15_mybatis.board.C;
-import com.lec.sts15_mybatis.board.beans.BWriteDAO;
+
 import com.lec.sts15_mybatis.board.beans.BWriteDTO;
 import com.lec.sts15_mybatis.board.beans.IWriteDAO;
 
@@ -24,7 +24,9 @@ public class BUpdateCommand implements BCommand {
 		
 		//MyBatis 사용
 		IWriteDAO dao=C.sqlSession.getMapper(IWriteDAO.class);
-		model.addAttribute("result",dao.update(dto));
+		//model.addAttribute("result",dao.update(dto));
+		//두개의 매개변수 가진 버전-> MapperScan, Param 사용한 버전 p
+		model.addAttribute("result",dao.update(dto.getUid(),dto));
 		
 		
 		

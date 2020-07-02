@@ -25,9 +25,11 @@ public class BWriteCommand implements BCommand {
 		
 		//MyBatis 사용
 		IWriteDAO dao=C.sqlSession.getMapper(IWriteDAO.class);
-//		model.addAttribute("result",dao.insert(dto));
-		model.addAttribute("result",
-				dao.insert(dto.getSubject(),dto.getContent(),dto.getName()));
+		model.addAttribute("result",dao.insert(dto));
+		
+		System.out.println("생성된 uid는 "+dto.getUid());
+		//model.addAttribute("result",
+				//dao.insert(dto.getSubject(),dto.getContent(),dto.getName()));
 	}
 
 }
